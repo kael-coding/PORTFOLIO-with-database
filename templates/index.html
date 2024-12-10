@@ -20,129 +20,7 @@
             color: #05b4ff;
         }
 
-        .skills {
-        background-color: #2a2a2a;
-        padding: 50px 0; /* Add padding for spacing */
-    }
-
-    .skill-container {
-        width: 90%; /* Use a percentage for responsiveness */
-        max-width: 600px; /* Limit max width */
-        margin: 0 auto; /* Center the container */
-        padding: 20px; /* Add padding */
-    }
-
-    .skill-heading {
-        text-decoration: underline;
-        text-align: center;
-        text-underline-offset: 10px;
-        text-decoration-thickness: 5px;
-        margin-bottom: 50px;
-        color: #fff; /* Ensure heading is visible */
-    }
-
-    .bars {
-        font-size: 23px;
-        display: flex; /* Use flexbox for alignment */
-        align-items: center; /* Center items vertically */
-        justify-content: space-between; /* Space between icon and progress line */
-        margin: 20px 0; /* Add margin for spacing */
-    }
-
-    .technical-bars {
-        margin: 40px 0;
-    }
-
-    .technical-bars .info {
-        margin-bottom: 5px;
-    }
-
-    .technical-bars .info span {
-        font-size: 17px;
-        font-weight: 500;
-        animation: showText 0.5s linear forwards;
-    }
-
-    .technical-bars .progress-line {
-        position: relative;
-        width: 100%;
-        height: 5px;
-        background-color: #000;
-        border-radius: 5px;
-        animation: animate 1s cubic-bezier(1, 0, 0, 1) forwards;
-        transform: scaleX(0);
-        transform-origin: left;
-    }
-
-    @keyframes animate {
-        100% {
-            transform: scaleX(1);
-        }
-    }
-
-    .progress-line span {
-        height: 100%;
-        background-color: #05b4ff;
-        position: absolute;
-        border-radius: 10px;
-        animation:  1s 1s cubic-bezier(1, 0, 0, 1) forwards;
-        transform: scaleX();
-    }
-
-    .progress-line.html span {
-        width: 80%;
-    }
-    .progress-line.css span {
-        width: 70%;
-    }
-    .progress-line.javascript span {
-        width: 40%;
-    }
-    .progress-line.java span {
-        width: 75%;
-    }
-    .progress-line.php span {
-        width: 90%;
-    }
-
-    /* Media Queries for Responsive Design */
-    @media (max-width: 768px) {
-        .skill-container {
-            width: 95%; /* Adjust width for smaller screens */
-            padding: 10px; /* Reduce padding */
-        }
-
-        .skill-heading {
-            font-size: 1.5rem; /* Adjust font size */
-            margin-bottom: 30px; /* Adjust margin */
-        }
-
-        .bars {
-            font-size: 18px; /* Adjust font size for bars */
-        }
-
-        .technical-bars .info span {
-            font-size: 14px; /* Adjust font size for skill names */
-        }
-
-        .progress-line {
-            height: 4px; /* Adjust height for progress lines */
-        }
-    }
-
-    @media (max-width: 480px) {
-        .skill-heading {
-            font-size: 1.2rem; /* Further adjust font size for very small screens */
-        }
-
-        .bars {
-            font-size: 16px; /* Further adjust font size for bars */
-        }
-
-        .technical-bars .info span {
-            font-size: 12px; /* Further adjust font size for skill names */
-        }
-    }   
+            
         
        
     </style>
@@ -156,7 +34,7 @@
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#projects">Projects</a></li>   
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>

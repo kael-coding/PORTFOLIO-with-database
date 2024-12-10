@@ -1,4 +1,4 @@
-{%load static%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +11,7 @@
 
 <body>
     <div class="container">
-        <a href="{%url 'admin-dashboard'%}" class="back-link"><i class='bx bx-arrow-back'></i> Back</a>
+        <a href="{% url 'admin-dashboard' %}" class="back-link"><i class='bx bx-arrow-back'></i> Back</a>
         <h1>CRUD PROJECT TABLES</h1>
         <a href="/add-project/" class="crud-button add">Add Project</a>
         <table class="crud-table">
@@ -43,5 +43,4 @@
         </table>
     </div>
 </body>
-
 </html>
