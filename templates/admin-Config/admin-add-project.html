@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Admin | Add-Project</title>
     <style>
       body {
@@ -77,6 +78,27 @@
         background-color: #0056b3;
       }
 
+      /* Back button design */
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 15px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      .back-link i {
+        margin-right: 8px;
+      }
+
+      .back-link:hover {
+        background-color: #0056b3;
+      }
+
       /* Responsive Design */
       @media (max-width: 600px) {
         form {
@@ -86,15 +108,22 @@
         button {
           padding: 10px;
         }
+
+        .back-link {
+          padding: 8px 12px;
+        }
       }
     </style>
   </head>
   <body>
+    
     <div>
-      <h1>Add Project</h1>
       <form method="post" enctype="multipart/form-data">
+        <a href="{%url 'list-project'%}" class="back-link"><i class='bx bx-arrow-back'></i> Back</a>
+        <h1>Add Project</h1>
         {% csrf_token %}
         <div class="form-group">
+
           {{ form.as_p }}
         </div>
         <button type="submit">Add Project</button>

@@ -65,13 +65,46 @@ span {
 .navbar a.active {
     color: #fff;
 }
-#menu-btn {
-    font-size: 35px;
-    color: #fff;
-    z-index: 1000;
+.bx-menu {
+    display: none; 
+    font-size: 30px;
     cursor: pointer;
-    margin-left: 25px;
-    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none; 
+        flex-direction: column; 
+        position: absolute; 
+        top: 60px; 
+        right: 0;
+        background-color: #202020;
+        width: 100%; 
+        z-index: 1000; 
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+        transition: max-height 0.3s ease; 
+        max-height: 0; 
+        overflow: hidden; /
+    }
+
+    .navbar li {
+        padding: 10px 20px; 
+       
+    }
+
+    .navbar li:last-child {
+        border-bottom: none; 
+    }
+
+    .bx-menu {
+        display: block;
+    }
+
+    .menu-active {
+        display: flex; 
+        max-height: 300px; 
+    }
 }
 section {
     padding: 168px 15% 128px;
@@ -132,6 +165,37 @@ section {
     font-size: 1.1rem;
     line-height: 1.1;
     margin-bottom: 40px;
+}
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column; 
+        justify-content: center; 
+        padding: 20px; 
+    }
+
+    .img-box img {
+        width: 200px; 
+        height: 200px; 
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .home-text {
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .home-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .home-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .home-text p {
+        font-size: 1rem;
+    }
 }
 .about {
     display: grid;
@@ -269,83 +333,254 @@ section {
     }
 }
 
-
-
-
 .skills {
-    background-color: #2a2a2a;
-}
-.skill-container {
-    width: 600px;
-    height: 620px;
-    padding: 70px 90px;
-    margin-left: 200px;
-}
-.skill-heading {
-    text-decoration: underline;
-    text-align: center;
-    text-underline-offset: 10px;
-    text-decoration-thickness: 5px;
-    margin-bottom: 50px;
-}
-.bars {
-    font-size: 23px;
-}
-.technical-bars .bars {
-    margin: 40px 0;
-}
-.technical-bars .bars:first-child {
-    margin-top: 0;
-}
-.technical-bars .bars:last-child {
-    margin-bottom: 0;
-}
-.technical-bars .bars .info {
-    margin-bottom: 5px;
-}
-.technical-bars .bars .info span {
-    font-size: 17px;
-    font-weight: 500;
-    animation: showText 0.5s linear forwards;
-}
-.technical-bars .bars .progress-line {
-    position: relative;
-    width: 100%;
-    height: 5px;
-    background-color: #000;
-    border-radius: 5px;
-    animation: animate 1s cubic-bezier(1,0,0,1) forwards;
-    transform: scaleX(0);
-    transform-origin: left;
-}
-@keyframes animate {
-    100% {
-        transform: scaleX(1);
+        background-color: #2a2a2a;
+        padding: 50px 0; 
     }
-}
-.technical-bars .bars .progress-line span {
-    height: 100%;
-    background-color: #05b4ff;
-    position : absolute;
-    border-radius: 10px;
-    animation: 1s 1s cubic-bezier(1,0,0,1) forwards;
-    transform: scaleX();
-}
-.progress-line.html span {
-    width: 80%;
-}
-.progress-line.css span {
-    width: 70%;
-}
-.progress-line.javascript span {
-    width: 40%;
-}
-.progress-line.java span {
-    width: 75%;
-}
-.progress-line.php span {
-    width: 90%;
-}
+
+    .skill-container {
+        width: 90%; 
+        max-width: 600px; 
+        margin: 0 auto; 
+        padding: 20px; 
+    }
+
+    .skill-heading {
+        text-decoration: underline;
+        text-align: center;
+        text-underline-offset: 10px;
+        text-decoration-thickness: 5px;
+        margin-bottom: 50px;
+        color: #fff;
+    }
+
+    .bars {
+        font-size: 23px;
+        display: flex;
+        align-items: center; 
+        justify-content: space-between; 
+        margin: 20px 0; 
+    }
+
+    .technical-bars {
+        margin: 40px 0;
+    }
+
+    .technical-bars .info {
+        margin-bottom: 5px;
+    }
+
+    .technical-bars .info span {
+        font-size: 17px;
+        font-weight: 500;
+        animation: showText 0.5s linear forwards;
+    }
+
+    .technical-bars .progress-line {
+        position: relative;
+        width: 100%;
+        height: 5px;
+        background-color: #000;
+        border-radius: 5px;
+        animation: animate 1s cubic-bezier(1, 0, 0, 1) forwards;
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+
+    @keyframes animate {
+        100% {
+            transform: scaleX(1);
+        }
+    }
+
+    .progress-line span {
+        height: 100%;
+        background-color: #05b4ff;
+        position: absolute;
+        border-radius: 10px;
+        animation:  1s 1s cubic-bezier(1, 0, 0, 1) forwards;
+        transform: scaleX();
+    }
+
+    .progress-line.html span {
+        width: 80%;
+    }
+    .progress-line.css span {
+        width: 70%;
+    }
+    .progress-line.javascript span {
+        width: 40%;
+    }
+    .progress-line.java span {
+        width: 75%;
+    }
+    .progress-line.php span {
+        width: 90%;
+    }
+
+   
+    @media (max-width: 768px) {
+        .skill-container {
+            width: 95%; 
+            padding: 10px; 
+        }
+
+        .skill-heading {
+            font-size: 1.5rem; 
+            margin-bottom: 30px; 
+        }
+
+        .bars {
+            font-size: 18px; 
+        }
+
+        .technical-bars .info span {
+            font-size: 14px; 
+        }
+
+        .progress-line {
+            height: 4px; 
+        }
+    }
+
+    @media (max-width: 480px) {
+        .skill-heading {
+            font-size: 1.2rem; 
+        }
+
+        .bars {
+            font-size: 16px; 
+        }
+
+        .technical-bars .info span {
+            font-size: 12px; /
+        }
+    }   
+
+
+    .skills {
+        background-color: #2a2a2a;
+        padding: 50px 0; 
+    }
+
+    .skill-container {
+        width: 90%; 
+        max-width: 600px; 
+        margin: 0 auto; 
+        padding: 20px; 
+    }
+
+    .skill-heading {
+        text-decoration: underline;
+        text-align: center;
+        text-underline-offset: 10px;
+        text-decoration-thickness: 5px;
+        margin-bottom: 50px;
+        color: #fff;
+    }
+
+    .bars {
+        font-size: 23px;
+        display: flex;
+        align-items: center; 
+        justify-content: space-between; 
+        margin: 20px 0; 
+    }
+
+    .technical-bars {
+        margin: 40px 0;
+    }
+
+    .technical-bars .info {
+        margin-bottom: 5px;
+    }
+
+    .technical-bars .info span {
+        font-size: 17px;
+        font-weight: 500;
+        animation: showText 0.5s linear forwards;
+    }
+
+    .technical-bars .progress-line {
+        position: relative;
+        width: 100%;
+        height: 5px;
+        background-color: #000;
+        border-radius: 5px;
+        animation: animate 1s cubic-bezier(1, 0, 0, 1) forwards;
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+
+    @keyframes animate {
+        100% {
+            transform: scaleX(1);
+        }
+    }
+
+    .progress-line span {
+        height: 100%;
+        background-color: #05b4ff;
+        position: absolute;
+        border-radius: 10px;
+        animation:  1s 1s cubic-bezier(1, 0, 0, 1) forwards;
+        transform: scaleX();
+    }
+
+    .progress-line.html span {
+        width: 80%;
+    }
+    .progress-line.css span {
+        width: 70%;
+    }
+    .progress-line.javascript span {
+        width: 40%;
+    }
+    .progress-line.java span {
+        width: 75%;
+    }
+    .progress-line.php span {
+        width: 90%;
+    }
+
+   
+    @media (max-width: 768px) {
+        .skill-container {
+            width: 95%; 
+            padding: 10px; 
+        }
+
+        .skill-heading {
+            font-size: 1.5rem; 
+            margin-bottom: 30px; 
+        }
+
+        .bars {
+            font-size: 18px; 
+        }
+
+        .technical-bars .info span {
+            font-size: 14px; 
+        }
+
+        .progress-line {
+            height: 4px; 
+        }
+    }
+
+    @media (max-width: 480px) {
+        .skill-heading {
+            font-size: 1.2rem; 
+        }
+
+        .bars {
+            font-size: 16px; 
+        }
+
+        .technical-bars .info span {
+            font-size: 12px; /
+        }
+    }   
 .progress-line span::after {
     position: absolute;
     padding: 1px 8px;

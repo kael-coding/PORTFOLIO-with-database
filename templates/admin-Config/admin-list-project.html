@@ -5,13 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <title>CRUD Table</title>
+    <title>ADMIN | LIST PROJECT CRUD</title>
     <link rel="stylesheet" href="{% static 'css/forms-crud.css' %}" />
 </head>
 
 <body>
     <div class="container">
-        <a href="" class="back-link"><i class='bx bx-arrow-back'></i> Back</a>
+        <a href="{%url 'admin-dashboard'%}" class="back-link"><i class='bx bx-arrow-back'></i> Back</a>
         <h1>CRUD PROJECT TABLES</h1>
         <a href="/add-project/" class="crud-button add">Add Project</a>
         <table class="crud-table">
