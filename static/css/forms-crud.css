@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.back-link i {
+    margin-right: 8px;
+}
+
+.crud-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.crud-table th,
+.crud-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.crud-table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.crud-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.crud-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.crud-button {
+    padding: 8px 16px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.crud-button.add {
+    background-color: #008cba;
+    color: white;
+}
+
+.crud-button.edit {
+    background-color: #4caf50;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.crud-button.delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.crud-button.add:hover {
+    background-color: #007bb5;
+}
+
+.crud-button.edit:hover {
+    background-color: #45a049;
+}
+
+.crud-button.delete:hover {
+    background-color: #da190b;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="file"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    font-size: 14px;
+}
+
+/* Add some responsive design */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .crud-table th, .crud-table td {
+        padding: 8px;
+    }
+
+    .crud-button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,47 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <title>CRUD Table</title>
+    <link rel="stylesheet" href="{% static 'css/forms-crud.css' %}" />
+</head>
+
+<body>
+    <div class="container">
+        <a href="" class="back-link"><i class='bx bx-arrow-back'></i> Back</a>
+        <h1>CRUD PROJECT TABLES</h1>
+        <a href="/add-project/" class="crud-button add">Add Project</a>
+        <table class="crud-table">
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Project Description</th>
+                    <th>Project Image</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for project in projects %}
+                <tr>
+                    <td>{{ project.title }}</td>
+                    <td>{{ project.description }}</td>
+                    <td><img src="{{ project.image.url }}" alt="{{ project.title }}" width="100"></td>
+                    <td>
+                        <a href="{% url 'edit-project' pk=project.id %}" class="crud-button edit">Edit</a>
+                        <a href="{% url 'delete-project' project.pk %}" class="crud-button delete">Delete</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="4">No projects available.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

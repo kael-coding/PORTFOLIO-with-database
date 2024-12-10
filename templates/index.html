@@ -1,0 +1,215 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <title>Portfolio</title>
+    <style>
+        .lock-icon {
+            position: absolute;
+            right: 30px;
+            font-size: 24px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Carl <span>Dungon</span></a>
+        <ul class="navbar">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="bx bx-menu" id="menu-btn"></div>
+        <a href="{%url 'user-admin'%}" class="lock-icon"><i class='bx bxs-lock-alt'></i></a>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-text">
+            <div class="slide">
+                <span class="one">Hello</span>
+                <span class="two">I'm</span>
+            </div>
+            <h1>Dungon, Carl Michael B.</h1>
+            <h3>Future Website <span>Developer</span></h3>
+            <p>I'm continue to learn for the <span>Front-end</span> and <span>Back-end Developer</span></p>
+        </div>
+        <div class="img-box">
+            <img src="{%static 'img/image.jpg'%}" alt="Profile Image">
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="{%static 'img/image.jpg'%}" alt="About Image">
+        </div>
+        <div class="about-text">
+            <h2>About <span>Me</span></h2>
+            <h4>Future Website Developer!</h4>
+            <p> I'm seeking opportunities to develop my skills as a website developer, eager to learn from experienced professionals and contribute to real-world projects. 
+                I'm a highly motivated and quick learner, always seeking opportunities to expand my knowledge and stay current with the latest technologies. 
+                I'm particularly drawn to collaborative environments where I can learn from others and contribute my own unique perspective.
+            </p>
+        </div>
+    </section>
+
+    <section class="timeline" id="education">
+        <div class="main-text">
+            <h2><span>My </span>Education</h2>
+        </div>
+        <div class="timeline-row">
+            <div class="timeline-column">
+                <h2 class="title">Education<span class="animate" style="--i:1;"></span></h2>
+
+                <div class="timeline-box">
+                    <div class="timeline-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i>2010 - 2017</div>
+                            <h3>Sta. Quiteria Elementary School (Kindergarten to Grade 6)</h3>
+                            <p>During my elementary school years, I learned to read and write. I also learned the basics of science. As a child, I was quite shy.  I also enjoyed playing games.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i>2017 - 2022</div>
+                            <h3>St. Dominic de Guzman School (High School to Senior High School)</h3>
+                            <p>In high school, I was a bit lazy and addicted to online games, but my grades remained high.  In senior high school, I enjoyed programming because we had a computer subject.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i>2022 - Present</div>
+                            <h3>STI College Sta. Maria Bulacan (College)
+                            </h3>
+                            <p>In college, I became serious about my studies, especially programming, because I want to become a web developer in the near future.</p>
+                        </div>
+                    </div>
+
+                    <span class="animate" style="--i:2;"></span>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="main-text">
+            <h2><span>My </span>Skills</h2>
+        </div>
+
+        <div class="skill-container">
+            <h1 class="skill-heading">Technical Skills </h1>
+                <div class="technical-bars">
+                    <div class="bars"><i style="color: #f06529;" class='bx bxl-html5'></i>
+                    <div class="info">
+                        <span>HTML</span>
+                    </div>
+                    <div class="progress-line html">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="technical-bars">
+                    <div class="bars"><i style="color: #2965f1;" class='bx bxl-css3'></i>
+                    <div class="info">
+                        <span>CSS</span>
+                    </div>
+                    <div class="progress-line css">
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="technical-bars">
+                    <div class="bars"><i style="color: #F0DB4F;" class='bx bxl-javascript'></i>
+                    <div class="info">
+                        <span>JAVASCRIPT</span>
+                    </div>
+                    <div class="progress-line javascript">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="technical-bars">
+                    <div class="bars"><i style="color: #8993be;" class='bx bxl-php'></i>
+                    <div class="info">
+                        <span>PHP</span>
+                    </div>
+                    <div class="progress-line php">
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="technical-bars">
+                    <div class="bars"><i style="color: #f89820;" class='bx bxl-java'></i>
+                    <div class="info">
+                        <span>JAVA</span>
+                    </div>
+                    <div class="progress-line java">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+            <div class="main-text">
+                <h2><span>Latest</span> Projects</h2>
+            </div>
+            <div class="projects-content">
+                {% for project in projects %}
+                <div class="row">
+                    <img src="{{ project.image.url }}" alt="" width="100">
+                    <div class="layer">
+                        <h5>{{ project.title }}</h5>
+                        <p>{{ project.description }}</p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+            {%endfor%}
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="contact-text">
+                <h2>Contact <span>Me!</span></h2>
+                <h4>If you have any project in your mind.</h4>
+                <p>I'm a Future Website Developer - creating bold & brave interface design for companies all across the world.</p>
+                <div class="list">
+                    <li><a href="#">09288915857</a></li>
+                    <li><a href="#">michaelbete212@gmail.com</a></li>
+                </div>
+
+                <div class="contact-icons">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form action="">
+                    <input type="name" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="number" placeholder="Mobile Number" required>
+                    <textarea name="" id="" cols="35" rows="10" placeholder="How Can I Help You" required></textarea>
+                    <input type="submit" value="Send Message" class="submit" required>
+                </form>
+            </div>
+        </section>
+        <footer style="background-color: #05b4ff; color: white; padding: 20px 0; text-align: center;">
+    <p>Contact: <a href="mailto:michaelbete21@gmail.com" style="color: white; text-decoration: none;">michaelbete21@gmail.com</a></p>
+    <p>&copy; 2024 All Rights Reserved</p>
+    <p>Designed by <strong>Carl Dungon</strong></p>
+</footer>s  
+        <script src="{%static 'js/index.js'%}"></script>
+    </body>
+</html>
